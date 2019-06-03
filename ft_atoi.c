@@ -32,7 +32,7 @@ int	ft_atoi(char *a)
 			b = -1;
 		i++;
 	}
-	while (ft_isdigit(a[i]))
+	while (a[i] >= '0' && a[i] <= '9' )
 	{
 		ret  = (ret * 10) + a[i] - '0';
 		i++;
