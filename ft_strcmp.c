@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:27:15 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/05 15:30:03 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/06 11:17:49 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ int		ft_strcmp(const char *s1, const char *s2)
 	int b;
 	int c;
 
+
 	a = sizeof(s1);
 	b = sizeof(s2);
 	c = a - b;
 
 	return (c);
+
 }

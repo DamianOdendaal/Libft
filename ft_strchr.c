@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 14:51:32 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/06 15:02:14 by dodendaa         ###   ########.fr       */
+/*   Created: 2019/06/06 15:18:20 by dodendaa          #+#    #+#             */
+/*   Updated: 2019/06/06 15:41:00 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-	size_t	len;
+	char	*str;
 
-	len = 0;
-	while (dst[len] && len < size)
-		len += 1;
-	i = len;
-	while (src[len - i] && len + 1 < size)
+	str = (char *)s;// read up on typecasting properly 
+	while (*str != c)
 	{
-		dst[len] = src[len - i];
-		len += 1;
+		if (*str == '\0')
+		{
+			return (NULL);
+		}
+		str++;
 	}
-	if (i < size)
-		dst[len] = '\0';
-	return (i + ft_strlen(src));
+	return (str);
 }
+

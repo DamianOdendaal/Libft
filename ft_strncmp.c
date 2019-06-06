@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 14:51:32 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/06 15:02:14 by dodendaa         ###   ########.fr       */
+/*   Created: 2019/06/06 10:13:15 by dodendaa          #+#    #+#             */
+/*   Updated: 2019/06/06 16:26:37 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	size_t	len;
-
-	len = 0;
-	while (dst[len] && len < size)
-		len += 1;
-	i = len;
-	while (src[len - i] && len + 1 < size)
-	{
-		dst[len] = src[len - i];
-		len += 1;
-	}
-	if (i < size)
-		dst[len] = '\0';
-	return (i + ft_strlen(src));
+	
 }
