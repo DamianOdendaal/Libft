@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 14:51:32 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/06 15:02:14 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/07 14:55:14 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	while (dst[len] && len < size)
 		len += 1;
 	i = len;
-	while (src[len - i] && len + 1 < size)
+	while (src[len - i] && len + 1 < size) 
 	{
 		dst[len] = src[len - i];
 		len += 1;
