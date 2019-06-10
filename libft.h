@@ -6,18 +6,22 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:04:08 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/06 14:54:10 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/10 12:00:05 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
-#include <errno.h>
-#include <ctype.h>
+typedef struct	s_list
+{
+	void		*content;
+	size_t		content_size;
+	struct		s_list *next;
+}				t_list;
 
 size_t			ft_strlen(const char *s);
 char			*ft_strdup(const char *str);
@@ -78,5 +82,11 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+t_list			*ft_lstnew(void const *content, size_t content_size);
+void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstadd(t_list **alst, t_list *new);
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
