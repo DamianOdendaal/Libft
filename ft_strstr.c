@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:36:22 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/10 11:37:50 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/11 14:36:33 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_strstr(const char *s1, const char *s2)
 	{
 		return (NULL);
 	}
-	return ((char *)s2);
+	return ((char *)s1);
 }
 
 int main ()
