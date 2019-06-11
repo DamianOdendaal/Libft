@@ -16,18 +16,26 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t i;
 	unsigned char *dup;
+	unsigned char a;
 	
 	i = 0;
 	dup = (unsigned char *)s;
+	a = (unsigned char)c;
+
 	while (i < n)
 	{
-		if (*dup == c)
+		if (*(dup + i) == a)
 		{
-			return ((unsigned char *)s);
+			return ((unsigned char *)s + i);
 		} 
 		i++;
-		dup++;
+	
+		
 	}
 	return (NULL);
+		
+		
+		
+		
 }
 
