@@ -11,4 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-char    *ft_strnew(size_t size);
+
+char	*ft_strnew(size_t size)
+{
+	char *a;
+	
+	a = (char *)malloc(sizeof(char) * (size + 1));
+	if (!a)
+		return (NULL);
+	ft_memset(a,  (int)'\0', size + 1);
+	return (a);
+}
