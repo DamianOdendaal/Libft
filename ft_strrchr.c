@@ -9,24 +9,25 @@
 /*   Updated: 2019/06/12 15:02:05 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	 char	*str;
+	 char	a;
+	 int i;
 
-	str = ( char *)s;
-	while (*str != c)
+	a = (char)c;
+	i = 0;
+	while (s[i] == '\0')
 	{
-		if (*str == '\0')
+		if(s[i] == '\0' || s[i] != a)
 		{
 			return (NULL);
 		}
-		if (*str == c )
-		{
-			return (str);
-		}
-		str++;
+		else
+			return ((char *)s[i]);
+		i--;
 	}
-	return (str);
+	return (0);// remember to use strlen 
 }
