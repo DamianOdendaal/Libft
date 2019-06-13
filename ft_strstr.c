@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:36:22 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/11 14:36:33 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/13 11:25:52 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,29 @@
 #include <string.h>
 
 char	*ft_strstr(const char *haystack, const char *needle)
-{
-	
-	while (*haystack == *needle)
-	{
-		
-		if (*haystack == '\0')
-		{
-			return (NULL);
-		}
-		haystack++;
+{	
+	int len;
 
-		
-	}
-	return (haystack);
-	
+	len = 0;
+
 	if (!needle)
+		return ((char *)haystack);
+	while (*haystack)
 	{
-		return (haystack);
+		while (*haystack == *needle)
+		{
+			haystack++;
+			needle++;
+			len++;
+		}
+		if (*needle == '\0')
+			return ((char *)haystack - len);
+		needle -= len;
+		len = 0;
+		haystack++;
 	}
+	return (NULL);
+
+
+
 }

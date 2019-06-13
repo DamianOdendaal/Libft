@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 10:04:26 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/10 10:08:31 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/13 13:44:15 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 int		ft_strequ(const char *s1, const char *s2)
 {
-	if (*s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return (1);
-
+	if (*s1 != *s2)
 		return (0);
+	else
+		return (1);
 }
