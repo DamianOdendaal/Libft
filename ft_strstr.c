@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:36:22 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/13 16:40:18 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/14 16:13:12 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,4 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		len = 0;
 	}
 	return (NULL);
-
-
-
 }
