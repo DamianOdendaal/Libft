@@ -3,7 +3,6 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char *str;
-	char *a;
 	int i;
 
 	i = 0;
@@ -13,10 +12,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if(!(str = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	else 
-		a = malloc(sizeof(char) + 1);
 		while (s[i] != '\0')
 		{
-			str[i] = (*f)(i,(char)a);
+			str[i] = (*f)(i,(s[i]));
 			i++;
 		}
 		str[i] = '\0'; 
