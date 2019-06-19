@@ -1,5 +1,4 @@
 /* ************************************************************************** */
-
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   atoi.c                                             :+:      :+:    :+:   */
@@ -7,36 +6,31 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:35:23 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/05/27 14:43:35 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/19 09:55:26 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_atoi(char *a)
+int	ft_atoi(const char *str)
 {
-	size_t i;
-	size_t b;
-	size_t ret;
+	size_t	i;
+	size_t	b;
+	size_t	ret;
 
 	i = 0;
 	b = 1;
 	ret = 0;
-	while (a[i] == ' ' || a[i] == '\t' || a[i] == '\n' || a[i] == '\v' || a[i] == '\f' ||
-			a[i] == '\r')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'\
+			|| str[i] == '\f' || str[i] == '\r')
 		i++;
-	if (a[i] == '-' || a[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (a[i] == '-')
+		if (str[i++] == '-')
 			b = -1;
-		i++;
 	}
-	while (a[i] >= '0' && a[i] <= '9' )
-	{
-		ret  = (ret * 10) + a[i] - '0';
-		i++;
-	}
+	while (str[i] >= '0' && str[i] <= '9' )
+		ret  = (ret * 10) + str[i++] - '0';
 	ret = ret * b;
 	return (ret);
 }

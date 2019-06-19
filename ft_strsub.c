@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 12:16:43 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/10 12:16:47 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/19 09:26:01 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,20 @@
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char *substr;
-	char *str;
+	size_t i;
 
-	str = (char *)s;
+	i = 0;
 	if(!s)
 		return (NULL);
-	if(!(substr = ft_strnew(ft_strlen(s))))
+	if(!(substr = ft_strnew(len)))
 		return (NULL);
-	len = ft_strlen(substr);
-	start = len;
+	while (i < len)
+	{
+		substr[i] = s[start];
+		i++;
+		start++;
+	}
+	substr[i] = '\0';
 	if(!start || !len) 
 		return (NULL);
 	return (substr);
