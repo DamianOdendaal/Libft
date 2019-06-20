@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_iswhitespace.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/10 10:04:26 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/20 14:55:59 by dodendaa         ###   ########.fr       */
+/*   Created: 2019/06/20 16:10:06 by dodendaa          #+#    #+#             */
+/*   Updated: 2019/06/20 17:18:21 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(const char *s1, const char *s2)
-{	
-	int i;
-
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while (s1[i] && s2[i])
-		i++;
-	if (s1[i] != s2[i])
-		return (0);
-	else 
+int	ft_iswhitespace(char c)
+{
+	if (c == ' ' || c == '\t' || c == '\n')
 		return (1);
-}		
+	return (0);
+}
+
