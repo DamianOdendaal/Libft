@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:04:08 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/10 12:00:05 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/20 16:12:40 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ typedef struct	s_list
 	size_t		content_size;
 	struct		s_list *next;
 }				t_list;
+
+int				ft_iswhitespace(char c);
 
 size_t			ft_strlen(const char *s);
 char			*ft_strdup(const char *str);

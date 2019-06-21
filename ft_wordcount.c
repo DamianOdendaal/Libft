@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/10 12:15:30 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/21 14:56:31 by dodendaa         ###   ########.fr       */
+/*   Created: 2019/06/21 14:58:16 by dodendaa          #+#    #+#             */
+/*   Updated: 2019/06/21 16:39:22 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_wordcount(char *str, char delim)
 {
-	size_t i;
-	const unsigned char *str1;
-	const unsigned char *str2;
+	int i;
+	int wordc;
 
-	str1 = (const unsigned char *)s1;
-	str2 = (const unsigned char *)s2;
-	i = -1;
-	while (++i < n)
+	i = 0;
+	wordc = 0;
+	while (str[i])
 	{
-			if ( str1[i] != str2[i])
-				return (str1[i] - str2[i]);
+		while (str[i] == delim && str[i] != '\0')
+			i++;
+		while (str[i] != delim && str[i])
+			i++;
+		if(str[i] == delim)
+			wordc++;
+		if(str[i] == '\0')
+			break;
 	}
+	return (wordc);
+}
+
+int	main()
+{
+	char a[] = "Hello     my  name  is     Damian  and  i  skate       ";
+	printf("The number of words is %d \n", ft_wordcount(a,' '));
 	return (0);
 }
+
+
