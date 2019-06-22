@@ -14,24 +14,24 @@
 
 char	*ft_strtrim(char const *s)
 {
+	char		*new;
 	const char	*start;
 	const char	*end;
-	char		*new;
 	size_t		len;
 	
 	new = NULL;
 	if (s)
 	{
 		len = 0;
-		end = (s + (ft_strlen(s)));
-		while (ft_iswhitespace(*s) == 1)
+		end = (s + ft_strlen(s));
+		while (ft_iswhitespace(*s)  && *s)
 			s++;
 		start = s;
-		while (ft_iswhitespace(*(end -1) == 1 && end != start))
+		while (ft_iswhitespace(*(end - 1))  && end != start)
 			end--;
 		while (s++ != end)
 			len++;
-		if(!(new = ft_strsub(start, 0, len)))
+		if(!(new = ft_strsub(start , 0, len)))
 			return (NULL);
 	}
 	return (new);

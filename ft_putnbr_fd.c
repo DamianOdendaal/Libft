@@ -28,6 +28,6 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putnbr_fd(n / 10, fd);
 			ft_putchar_fd(n % 10 + '\0', fd);
 		}
-	else
+	else if(ft_isdigit(n))
 		ft_putchar_fd(n + '0', fd);
 }

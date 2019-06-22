@@ -23,7 +23,10 @@ typedef struct	s_list
 	struct		s_list *next;
 }				t_list;
 
+size_t				ft_intlen(long int num);
+char			*ft_strndup(const char *str, size_t n);
 int				ft_iswhitespace(char c);
+size_t				ft_wordcount(char *str, char delim);
 
 size_t			ft_strlen(const char *s);
 char			*ft_strdup(const char *str);
@@ -73,7 +76,7 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strjoinfree(char *s1, char *s2);
 char			*ft_strtrim(char const *s);
-char			**ft_strsplit(char const *s, char *splitchars);
+char			**ft_strsplit(char const *s, char c);
 char			*ft_itoa(int n);
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);

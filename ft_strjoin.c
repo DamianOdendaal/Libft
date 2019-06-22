@@ -15,11 +15,10 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {	
 	char *str;
-	int i;
 
-	str = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
-	i = 0;
-	if(!str || !s1 || !s2)
+	if(!s1 || !s2)
+		return (NULL);
+	if(!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 		return (NULL);
 	str = ft_strcat(ft_strcpy(str,(char *)s1), (char *)s2);
 	return (str);

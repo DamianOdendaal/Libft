@@ -11,34 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int		ft_wordcount(char *str, char delim)
+size_t		ft_wordcount(char *str, char delim)
 {
-	int i;
-	int wordc;
+	size_t i;
+	size_t wordc;
 
 	i = 0;
 	wordc = 0;
 	while (str[i])
 	{
-		while (str[i] == delim && str[i] != '\0')
+		while (str[i] == delim && str[i])
 			i++;
 		while (str[i] != delim && str[i])
 			i++;
-		if(str[i] == delim)
+		if(str[i] == str[i])
 			wordc++;
-		if(str[i] == '\0')
-			break;
 	}
 	return (wordc);
 }
-
-int	main()
-{
-	char a[] = "Hello     my  name  is     Damian  and  i  skate       ";
-	printf("The number of words is %d \n", ft_wordcount(a,' '));
-	return (0);
-}
-
-
