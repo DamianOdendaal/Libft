@@ -4,17 +4,27 @@
 
 char	*ft_itoa(int n)
 {
-	char *rets;
-	long int nbr;
-	unsigned int i;
+	char *strr;
+	int intlen;
 
-	i = ft_intlen(n);
-	if (!(rets = ft_strnew(i)))
+	intlen = ft_intlen((size_t)n);
+	if (!(strr = ft_strnew(intlen)))
 		return (NULL);
-	nbr = n;
-	if (nbr < 0)
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	else if (n < 0)
 	{
-		nbr *= -1;
-		rets[i] = '-';
+		strr[0] = '-';
+		strr[1] = '\0';
+		strr = ft_strjoin(strr, ft_itoa(-n));
+
 	}
+	else if (n >= 10)
+		strr = ft_strjoin((ft_itoa(n / 10)),(ft_itoa(n % 10)));
+	else
+	{
+		strr[0] = (n + '0');
+		strr[1] = '\0';
+	}
+	return (strr);
 }
