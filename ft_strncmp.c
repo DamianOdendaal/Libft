@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 10:13:15 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/24 09:25:42 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 15:35:44 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,10 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	while (str1[i] && str1[i] == str2[i] && i < n - 1)
 		i++;
-	return (str1[i] - str2[i]);
+	if (str1[i] - str2[i] > 0)
+		return (1);
+	else if (str1[i] - str2[i] < 0)
+		return (-1);
+	else
+		return (0);
 }

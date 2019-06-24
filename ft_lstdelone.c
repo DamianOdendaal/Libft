@@ -6,9 +6,15 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 12:18:39 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/10 12:18:43 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 15:23:47 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
-void    ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+#include "libft.h"
+
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+{
+	if (alst && del)
+		return ;
+	return ;
+}

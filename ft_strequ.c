@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 10:04:26 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/24 10:08:53 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 15:05:49 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_strequ(const char *s1, const char *s2)
 	i = 0;
 	if (!s1 || !s2)
 		return (0);
-	while (s1[i] && s2[i])
+	while (s1[i] == s2[i] && s1[i])
 		i++;
 	if (s1[i] != s2[i])
 		return (0);

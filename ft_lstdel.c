@@ -6,10 +6,15 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 12:18:31 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/24 11:03:14 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 15:24:11 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+{
+	if (alst && del)
+		return ;
+	return ;
+}

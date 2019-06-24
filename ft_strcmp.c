@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:27:15 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/24 09:25:04 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 15:40:20 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ int		ft_strcmp(const char *s1, const char *s2)
 		s1++;
 		s2++;
 	}
-	if (*s1 == '\0' && *s2 == '\0')
+	if ((unsigned char)*s1 - (unsigned char)*s2 > 0)
+		return (1);
+	else if ((unsigned char)*s1 - (unsigned char)*s2 < 0)
+		return (-1);
+	else
 		return (0);
-	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
