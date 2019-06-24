@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 12:16:02 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/12 15:06:36 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 11:25:06 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 void	*ft_memalloc(size_t size)
 {
-	
-		void *a;
+	void *a;
 
-		if (!(a = malloc(size)))
-			return(NULL);
-			ft_bzero(a, size);
-		return (a);		
+	if (!(a = (void *)malloc(sizeof(char) * (size))))
+		return (NULL);
+	ft_bzero(a, size);
+	return (a);
 }

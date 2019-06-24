@@ -6,13 +6,13 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:27:09 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/03 15:47:56 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 09:14:23 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest,const char *src, size_t n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	unsigned int i;
 

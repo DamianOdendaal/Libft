@@ -1,14 +1,23 @@
-//header
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtok.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/24 10:14:18 by dodendaa          #+#    #+#             */
+/*   Updated: 2019/06/24 11:02:17 by dodendaa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strtok(const char *str, const char *delim)
 {
-	char *start;
-	size_t len;
-	char *pstart;
-	int i;
+	char	*start;
+	size_t	len;
+	char	*pstart;
+	int		i;
 
 	start = NULL;
 	pstart = start;
@@ -16,7 +25,7 @@ char	*ft_strtok(const char *str, const char *delim)
 	i = 0;
 	if (!start || !str)
 		return (NULL);
-	while (*start != '\0')
+	while (*start)
 	{
 		while (i++ < len)
 		{
@@ -25,24 +34,10 @@ char	*ft_strtok(const char *str, const char *delim)
 			if (*start++ == delim[i])
 				*start = '\0';
 		}
-
 	}
 	if (i == len)
 		start = pstart;
 	if (*start == '\0')
 		return (NULL);
-	return (pstart);
-}
-
-int main()
-{
-	char str[] = "this is a simple string";
-	char *test;
-	test = ft_strtok(str, " ");
-	while (test != NULL)
-	{
-		printf("%s\n", test);
-		test = ft_strtok(NULL, " ");
-	}
-	return (0);
+	return (start);
 }

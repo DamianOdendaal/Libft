@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 12:14:59 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/11 15:53:26 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 09:06:27 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	source = (unsigned char *)src;
 	while (i < n)
 	{
-		if(*(source + i) != uc)
+		if (*(source + i) != uc)
 		{
-		*(dest + i) = *(source + i);
+			*(dest + i) = *(source + i);
 			i++;
 		}
 		else if (*(source + i) == uc)

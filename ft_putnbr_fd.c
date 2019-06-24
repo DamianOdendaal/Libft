@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 10:03:44 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/10 10:03:49 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 10:46:46 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(-n, fd);
 	}
 	else if (n >= 10)
-		{
-			ft_putnbr_fd(n / 10, fd);
-			ft_putnbr_fd(n % 10 + '\0', fd);
-		}
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10 + '\0', fd);
+	}
 	else
 		ft_putchar_fd(n + '0', fd);
 }

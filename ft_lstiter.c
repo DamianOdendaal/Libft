@@ -6,10 +6,10 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 12:18:10 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/10 12:18:15 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 10:59:02 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));

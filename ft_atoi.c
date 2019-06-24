@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:35:23 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/19 09:55:26 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 09:26:28 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	ft_atoi(const char *str)
 		if (str[i++] == '-')
 			b = -1;
 	}
-	while (str[i] >= '0' && str[i] <= '9' )
-		ret  = (ret * 10) + str[i++] - '0';
+	while (str[i] >= '0' && str[i] <= '9')
+		ret = (ret * 10) + str[i++] - '0';
 	ret = ret * b;
 	return (ret);
 }

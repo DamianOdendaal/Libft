@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 12:16:33 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/20 14:55:53 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 10:33:59 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 		i++;
 	if (s1[i] != s2[i])
 		return (0);
-	else 
+	else
 		return (1);
-}		
+}

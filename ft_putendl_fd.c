@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 10:04:02 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/10 10:04:05 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 10:54:11 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,9 @@ void	ft_putendl_fd(const char *s, int fd)
 	int i;
 
 	i = 0;
-	if(!s)
+	if (!s)
 		return ;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
-	write(fd, "\n", 1);
+	while (s[i])
+		ft_putchar_fd(s[i++], fd);
+	ft_putchar_fd('\n', fd);
 }

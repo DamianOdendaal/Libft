@@ -6,14 +6,14 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 10:04:26 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/20 14:55:59 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 10:08:53 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int		ft_strequ(const char *s1, const char *s2)
-{	
+{
 	int i;
 
 	i = 0;
@@ -23,6 +23,6 @@ int		ft_strequ(const char *s1, const char *s2)
 		i++;
 	if (s1[i] != s2[i])
 		return (0);
-	else 
+	else
 		return (1);
-}		
+}

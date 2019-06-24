@@ -6,7 +6,7 @@
 /*   By: dodendaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/21 14:58:16 by dodendaa          #+#    #+#             */
-/*   Updated: 2019/06/21 16:39:22 by dodendaa         ###   ########.fr       */
+/*   Updated: 2019/06/24 10:58:24 by dodendaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t		ft_wordcount(char *str, char delim)
 			i++;
 		while (str[i] != delim && str[i])
 			i++;
-		if(str[i] == str[i])
+		if (str[i] == str[i])
 			wordc++;
 	}
 	return (wordc);
