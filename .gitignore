@@ -1,8 +1,0 @@
-#ignore dotfiles
-*.o
-*.swp
-*.swo
-*.DS_Store
-*.a
-*.out
-.gitignore
