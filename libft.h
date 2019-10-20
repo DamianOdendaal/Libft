@@ -23,10 +23,10 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+size_t				ft_wordcount(const char *s, char c);
 size_t				ft_intlen(long int num);
 char				*ft_strndup(const char *str, size_t n);
 int					ft_iswhitespace(char c);
-size_t				ft_wordcount(char *str, char delim);
 
 size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *str);
